@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors())
 app.use("/data",dataRoutes);
 app.use("/user",userRoutes);
-app.get("/",()=>{
+app.get("/",(req,res)=>{
     res.send("hello server is running");
 })
 
