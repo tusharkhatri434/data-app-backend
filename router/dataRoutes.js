@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/search", async (req, res) => {
+router.get("/search",authToken, async (req, res) => {
   try {
     const { start, end, age, gender, bar } = req.query;
     // console.log(req.query);
@@ -104,7 +104,7 @@ router.get("/search", async (req, res) => {
   }
 });
 
-router.get("/linebar", async (req, res) => {
+router.get("/linebar",authToken, async (req, res) => {
 
   const { start, end, age, gender,id } = req.query;
   // console.log(req.query);
